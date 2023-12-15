@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <post-form @create="createPost"></post-form>
-    <post-list :posts="posts" @remove="removePost"></post-list>
+    <div class="main">
+      <post-form @create="createPost"></post-form>
+      <post-list :posts="posts" @remove="removePost"></post-list>
+    </div>
   </div>
 </template>
 
@@ -43,5 +45,10 @@ export default {
 
 .app {
   padding: 20px;
+}
+
+.main {
+  margin: auto;
+  width: 50%;
 }
 </style>
